@@ -1,11 +1,13 @@
+////// COLLAPSE MENU ITEMS
 
-let collapsibles = document.getElementsByClassName("collapsible");
+//select all collapsible elements
+var collapsibles = document.getElementsByClassName("collapsible");
 
-// collapse menu items
-for (let i = 0; i < collapsibles.length; i++) {
+//when a section title gets clicked, make visible the sibling of the title, i.e. content
+for (var i = 0; i < collapsibles.length; i++) {
   collapsibles[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    let content = this.nextElementSibling;
+    var content = this.nextElementSibling;
     if (content.style.display === "flex") {
       content.style.display = "none";
     } else {
@@ -15,10 +17,10 @@ for (let i = 0; i < collapsibles.length; i++) {
 }
 
 // pullout animation
-for (let i = 0; i < collapsibles.length; i++) {
+for (var i = 0; i < collapsibles.length; i++) {
   collapsibles[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    let content = this.nextElementSibling;
+    var content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
@@ -27,27 +29,43 @@ for (let i = 0; i < collapsibles.length; i++) {
   });
 }
 
-let currentSection;
+//show modal gallery of the selected section, capture which section got clicked
+//relies on thumbnail with onclick="openModal(face);currentFaceSlide(1)
+var currentSection;
 
-//make visible selected modal section, capture which section it is
 function openModal(section){
-  let modalName = "modal-" + section;
+  var modalName = "modal-" + section;
   document.getElementById(modalName).style.display = "block";
   currentSection = section;
+  console.log(currentSection);
+
 }
 
 // Close all Modals
 function closeModal() {
-  let modalName = "modal-" + currentSection;
+  var modalName = "modal-" + currentSection;
   document.getElementById(modalName).style.display = "none";
 }
 
 
-
 ////// CREATURES
 
+//slightly different than other sections:
+//trying to work towards a single set of functions for all sections instead of separate
+
+function showCreatSlides(n) {
+  var slideName = "slide-" + currentSection;
+  var slides = document.getElementsByClassName(slideName);
+  if (n > slides.length) {slideIndexCreat = 1};
+  if (n < 1) {slideIndexCreat = slides.length};
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndexCreat - 1].style.display = "block";
+}
+
 //show slides starting from x
-let slideIndexCreat = 1;
+var slideIndexCreat = 1;
 showCreatSlides(slideIndexCreat);
 
 //increase/decrease which slide is shown
@@ -55,54 +73,34 @@ function changeCreatSlides(n) {
   showCreatSlides(slideIndexCreat += n);
 }
 
-//part of clicky behaviour, it opens the modal and sets it to --current--  //onclick="openModal('plant');currentPlantSlide(1)"
+//set modal to selected image
 function currentCreatSlide(n) {
   showCreatSlides(slideIndexCreat = n);
 }
 
-function showCreatSlides(n) {
-  let i;
-  let slideName = "slide-" + currentSection;
-  let slides = document.getElementsByClassName(slideName);
-  if (n > slides.length) {slideIndexCreat = 1}
-  if (n < 1) {slideIndexCreat = slides.length}
-  for (i = 0; i < slidesCreat.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndexCreat-1].style.display = "block";
-}
 
-// function showCreatSlides(n) {
-//   let i;
-//   let slidesCreat = document.getElementsByClassName("slide-creat");
-//   if (n > slidesCreat.length) {slideIndexCreat = 1}
-//   if (n < 1) {slideIndexCreat = slidesCreat.length}
-//   for (i = 0; i < slidesCreat.length; i++) {
-//     slidesCreat[i].style.display = "none";
+//TRYING TO WRITE A SINGLE FUNCTION to replace show"X"Slides() in each section
+//to be used in current"X"Slide and change"X"Slides
+
+// function showSlides(section, number) {
+//   var i;
+//   var slides = 'document.getElementsByClassName("slide-' + section + '")';
+//   console.log(slides);
+//   // var slidesCreat = document.getElementsByClassName("slide-creat");
+//   if (number > slides.length) {slideIndexCreat = 1}
+//   if (number < 1) {slideIndexCreat = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
 //   }
-//   slidesCreat[slideIndexCreat-1].style.display = "block";
+//   slides[slideIndexCreat-1].style.display = "block";
 // }
 
-//this is used in current- and changeCreatslides
-function showSlides(section, number) {
-  let i;
-  let slides = 'document.getElementsByClassName("slide-' + section + '")';
-  console.log(slides);
-  // let slidesCreat = document.getElementsByClassName("slide-creat");
-  if (number > slides.length) {slideIndexCreat = 1}
-  if (number < 1) {slideIndexCreat = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndexCreat-1].style.display = "block";
-}
 
 ////// FACES
 
-
-let slideIndexFace = 1;
+var slideIndexFace = 1;
 showFaceSlides(slideIndexFace);
- 
+
 // Next/previous controls
 function changeFaceSlides(n) {
   showFaceSlides(slideIndexFace += n);
@@ -114,21 +112,20 @@ function currentFaceSlide(n) {
 }
 
 function showFaceSlides(n) {
-  let i;
-  let slidesFace = document.getElementsByClassName("slide-face");
+  var i;
+  var slidesFace = document.getElementsByClassName("slide-face");
   if (n > slidesFace.length) {slideIndexFace = 1}
   if (n < 1) {slideIndexFace = slidesFace.length}
   for (i = 0; i < slidesFace.length; i++) {
     slidesFace[i].style.display = "none";
   }
-  slidesFace[slideIndexFace-1].style.display = "block";
+  slidesFace[slideIndexFace - 1].style.display = "block";
 }
 
 
 ////// PLACES
 
-
-let slideIndexPlace = 1;
+var slideIndexPlace = 1;
 showPlaceSlides(slideIndexPlace);
 
 // Next/previous controls
@@ -142,8 +139,8 @@ function currentPlaceSlide(n) {
 }
 
 function showPlaceSlides(n) {
-  let i;
-  let slidesPlace = document.getElementsByClassName("slide-place");
+  var i;
+  var slidesPlace = document.getElementsByClassName("slide-place");
   if (n > slidesPlace.length) {slideIndexPlace = 1}
   if (n < 1) {slideIndexPlace = slidesPlace.length}
   for (i = 0; i < slidesPlace.length; i++) {
@@ -155,8 +152,7 @@ function showPlaceSlides(n) {
 
 /////PLANTS
 
-
-let slideIndexPlant = 1;
+var slideIndexPlant = 1;
 showPlantSlides(slideIndexPlant);
 
 // Next/previous controls
@@ -170,8 +166,8 @@ function currentPlantSlide(n) {
 }
 
 function showPlantSlides(n) {
-  let i;
-  let slidesPlant = document.getElementsByClassName("slide-plant");
+  var i;
+  var slidesPlant = document.getElementsByClassName("slide-plant");
   if (n > slidesPlant.length) {slideIndexPlant = 1}
   if (n < 1) {slideIndexPlant = slidesPlant.length}
   for (i = 0; i < slidesPlant.length; i++) {
@@ -181,7 +177,7 @@ function showPlantSlides(n) {
 }
 
 
-////// EVERY CATEGORY - arrow key and escape actions
+////// EVERY SECTION - arrow key and escape actions
 document.addEventListener('keydown', function(event) {
   const key = event.key;
   switch (key) {
