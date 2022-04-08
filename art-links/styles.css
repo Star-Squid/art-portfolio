@@ -1,0 +1,124 @@
+body {
+  text-align: center;
+  background-color: #D4D4D4;
+  font-family: 'Raleway', sans-serif;
+  background-image: url(images/clover-click.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #A4C93C;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #2F5F20;
+}
+
+a:active {
+  color: #2F5F20;
+}
+
+h1 {
+  font-family: 'Parisienne', cursive;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: 'Parisienne', cursive;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+}
+
+p {
+  display: block;
+}
+
+textarea {
+  width: 100%;
+}
+
+.message {
+  width: 30vw;
+  transform: translate(80%);
+  text-align: left;
+  background-color: rgb(212, 212, 212);
+  background-color: rgba(212, 212, 212, 0.57);
+  font-weight: bolder;
+  padding: 30px;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.container {
+  width: 90vw;
+  padding: 5vw;
+  position: relative;
+  top: 50%;
+  transform: translate(-50% -50%);
+}
+
+.link {
+  font-weight: bolder;
+  font-size: 1.2rem;
+  font-family: 'Parisienne', cursive;
+}
+
+.small-link {
+  padding: 20px
+}
+
+.button-link {
+  background-color: #D4D4D4;
+  /* background-image: url(images/clover-click3.png); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  border: 1px solid #807B7B;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  filter: drop-shadow(5px 5px 0.2rem black)
+}
+
+.button {
+  margin: 5px;
+  padding: 15px 15px;
+  width: 50vw;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Parisienne', cursive;
+  outline: none;
+  color: #000;
+  background-color: #D4D4D4;
+  border: 1px solid #807B7B;
+  border-radius: 20px;
+  box-shadow: 2px 6px #807B7B;
+  filter: drop-shadow(2px 2px 0.2rem black)
+}
+
+.button:hover {
+  background-color: #A4C93C
+}
+
+.button:active {
+  background-color: #3e8e41;
+  color: #fff;
+  box-shadow: 2px 3px #666;
+  transform: translateY(4px);
+}
