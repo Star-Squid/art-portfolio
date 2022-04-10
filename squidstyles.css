@@ -32,10 +32,13 @@ html, body {
 body {
     min-width: 625px;
     text-align: center;
-    background-color: var(--lightgrey);
+    background: var(--lightgrey);
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
-    background-image: url("images/clover-long.png");
+    background:
+    url("images/clover-long.png"),
+    linear-gradient(0deg, var(--almostblack) 0% 20%, var(--transparent) 30% 100%),
+    var(--lightgrey);
     background-position: top left var(--biggap);
     background-repeat: no-repeat;
     background-size: 100vh;
@@ -69,21 +72,6 @@ h3{
 /* ------ TOP OF PAGE -------- */
 
 
-/* .enclose-image{
-  height: 100vh;
-  max-width: 3570px;
-  position: absolute;
-  top: 0;
-  left: var(--biggap);
-  z-index: -1;
-}
-
-.main-image{
-    width:100%;
-    height:100%;
-    overflow: hidden;
-} */
-
 #header{
     padding-top: var(--biggap);
     text-align: right;
@@ -92,15 +80,6 @@ h3{
     justify-content: flex-end;
     align-items: flex-end;
 }
-
-@media (max-width: 700px) {
-    #header {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-}
-
 
 .page-title {
     padding: 0 var(--doublegap);
@@ -141,11 +120,8 @@ h3{
     text-align: left;
     font-family: 'Parisienne', cursive;
     font-size: 3rem;
-    background-image: url("images/plant-top.png"),
+    background-image:
         linear-gradient(200deg, var(--lightgreen) 0%, var(--darkgreen) 95%);
-    background-position: left;
-    background-repeat:repeat-x;
-    background-size: contain;
 }
 
 .title-text{
@@ -227,13 +203,6 @@ h3{
     text-align: right;
 }
 
-@media (max-width: 1075px) {
-    #textbox {
-        text-align: center;
-        flex-basis: 80%;
-    }
-}
-
 #textbox a{
     color: var(--lightgreen);
     text-decoration: none;
@@ -284,12 +253,6 @@ h3{
     height: 1rem;
     margin-bottom: -0.1rem;
     display: inline-block;
-}
-
-@media (max-width: 700px) {
-    .bottom {
-        text-align: center;
-    }
 }
 
 
@@ -421,7 +384,7 @@ h3{
 /* image in the slideshow */
 .modal-content img{
     max-height: 90vh;
-    max-width: 90vh;
+    max-width: 90vw;
 }
 
 .close {
@@ -448,7 +411,7 @@ h3{
     position: absolute;
     top: 50vh;
     width: auto;
-    padding: var(--smallgap);
+    padding: var(--normalgap);
     margin-top: -50px;
     color: white;
     font-weight: bold;
@@ -470,4 +433,30 @@ h3{
 .prev:hover,
 .next:hover {
     background-color: var(--halfdark);
+}
+
+/* media */
+
+@media (max-width: 700px) {
+    html, body {
+        font-size: 3vmin;
+    }
+    #header {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .title-bar{
+          height: 8vh;
+    }
+    .bottom {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1075px) {
+    #textbox {
+        text-align: center;
+        flex-basis: 80%;
+    }
 }
