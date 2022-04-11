@@ -39,9 +39,9 @@ body {
        url("images/clover-long.png"),
        linear-gradient(0deg, var(--almostblack) 0% 20%, var(--transparent) 30% 100%),
        var(--lightgrey);
-    background-position: top left var(--biggap);
+    background-position: top left var(--normalgap);
     background-repeat: no-repeat;
-    background-size: 50rem;
+    background-size: 54rem;
   }
 
 div{
