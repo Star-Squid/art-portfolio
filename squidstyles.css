@@ -36,12 +36,12 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
     background:
-    url("images/clover-long.png"),
-    linear-gradient(0deg, var(--almostblack) 0% 20%, var(--transparent) 30% 100%),
-    var(--lightgrey);
+       url("images/clover-long.png"),
+       linear-gradient(0deg, var(--almostblack) 0% 20%, var(--transparent) 30% 100%),
+       var(--lightgrey);
     background-position: top left var(--biggap);
     background-repeat: no-repeat;
-    background-size: 100vh;
+    background-size: 50rem;
   }
 
 div{
@@ -117,6 +117,7 @@ h3{
 
 .title-bar{
     width: 100%;
+    min-height: 4rem;
     text-align: left;
     font-family: 'Parisienne', cursive;
     font-size: 3rem;
