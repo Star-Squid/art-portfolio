@@ -65,6 +65,7 @@ h3{
     background-color: rgba(212, 212, 212, 0.9);
     border-radius: var(--smallgap);
     margin: 0;
+    font-size: 1.5rem;
     font-weight: normal;
 }
 
@@ -100,7 +101,7 @@ h3{
     padding-right: var(--doublegap);
     padding-top: var(--biggap);
     padding-bottom: var(--biggap);
-    max-width: 40vw;
+    max-width: 50vw;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     color: var(--pink);
@@ -439,9 +440,6 @@ h3{
 /* media */
 
 @media (max-width: 700px) {
-    html, body {
-        font-size: 3vmin;
-    }
     #header {
         justify-content: center;
         align-items: center;
