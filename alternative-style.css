@@ -9,6 +9,7 @@
     --normalgap: 2vw;
     --biggap: 5vw;
     --doublegap: 7vw;
+    --vminwhenbig: 10.5px;
 
     --transparent: rgba(1, 1, 1, 0);
     --verylightgrey:#f1f1f1;
@@ -35,42 +36,22 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
     background: var(--darkgreen);
-    font-size: 1.3vmin;
-    /* background: var(--lightgrey); */
   }
-
-
-
-
-/* div{
-    border: black solid 2px;
-    border-radius: 1rem;
-} */
 
 .contain-multitudes{
     width: 100%;
     height: 100vh;
-    /* min-height: 98vh; */
     position: relative;
 
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-
     background: var(--darkgreen);
-    background: -webkit-radial-gradient(top, var(--mediumgreen) 40%, var(--darkgreen) 70%);
-    background: radial-gradient(at top, var(--mediumgreen) 40%, var(--darkgreen) 70%);
-    padding-bottom: var(--biggap);
-
+    background: -webkit-radial-gradient(circle top, var(--mediumgreen) 40%, var(--darkgreen) 70%);
+    background-image: radial-gradient(circle at top, var(--mediumgreen) 40%, var(--darkgreen) 70%);
+    background-repeat: no-repeat;
 }
 
 .contain-meaning{
-    width: 70vw;
+    width: 90%;
     max-width: 1200px;
-    min-width: 95%;
-    /* flex-basis: 90vh; */
-    /* height: 80vh; */
-    /* min-height: 80vh; */
 
     position: absolute;
     margin-left: auto;
@@ -92,7 +73,6 @@ body {
 
 .contain-heads{
     width: 100%;
-    /* flex-basis: 50%; */
 
     display: flex;
     flex-flow: column nowrap;
@@ -106,37 +86,7 @@ body {
     background-size: auto 100%;
     border-radius: 1rem;
     padding-top: var(--biggap);
-
-
 }
-
-
-/* .hero{
-    width:40%;
-    min-width: 40%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center; */
-
-    /* background: var(--lightgrey);
-    background-image: url("images/moving-clover-long.gif");
-    background-position: top left var(--normalgap);
-    background-repeat: no-repeat;
-    background-size: auto 100%; */
-/* } */
-
-/* .heading{
-    width:60%;
-    min-width: 60%;
-    height: 100%;
-
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: bottom;
-    justify-content: left;
-} */
 
 .title{
     width: 100%;
@@ -184,21 +134,16 @@ h3{
 
 .contain-menu{
     width: 100%;
-    /* flex-basis: 50%; */
 
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
     justify-content: space-between;
-    /* gap: -1px; */
-
-    /* background: var(--yellowish); */
 }
 
 .menu-bar{
     width: 100%;
-    height: 10vw;
-    /* flex-basis: 20%; */
+    height: 10vmin;
 
     display: flex;
     align-items: center;
@@ -217,20 +162,18 @@ h3{
 .menu-title{
     width: 30%;
     min-width: content;
-    /* height: 100%; */
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     font-family: 'Parisienne', cursive;
-    font-size: 8vw;
+    font-size: 7vw;
     color: var(--verylightgrey);
 }
 
 
 /* Section colours */
-
 #creat {
     background-color: var(--yellowish);
 }
@@ -253,9 +196,7 @@ h3{
 }
 
 /* Footer */
-
 .footer{
-    /* height: 6rem; */
     width: 100%;
 
     display: flex;
@@ -265,7 +206,6 @@ h3{
     flex-shrink: 1;
 
     text-align: right;
-    /* font-size: 1rem; */
     font-size: 2.5vw;
     padding: var(--normalgap);
     background-color: var(--darkgreen);
@@ -297,18 +237,41 @@ h3{
 }
 
 /* Small sizes */
-/* @media (max-width: 500px) {
-    html, body, div {
-        margin:0;
-        padding:0;
-        font-size: 2vmin;
+@media (max-width: 770px) {
+    .contain-meaning{
+        width: 90%;
+    
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 15%;
     }
+}
 
-
-
-    .social-icon img{
-        margin-top: var(--smallgap);
-        margin-bottom: -0.1rem;
-        display: inline-block;
+/* Large sizes */
+@media (min-width: 1050px) {
+    .contain-meaning{
+        width: 60%;
     }
-} */
+    
+    body {
+        font-size: calc(1.5 * var(--vminwhenbig));
+    }
+    h1{
+        font-size: calc(8 * var(--vminwhenbig));
+    }
+    h3{
+        font-size: calc(2.5 * var(--vminwhenbig));
+    }
+    .menu-bar{
+        height: calc(8 * var(--vminwhenbig));
+    }    
+    .menu-title{
+        font-size: calc(6 * var(--vminwhenbig));
+    }
+    .footer{
+        font-size: calc(1.5 * var(--vminwhenbig));
+    }
+  }
