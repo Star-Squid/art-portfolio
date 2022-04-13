@@ -67,7 +67,7 @@ body {
 
     background: var(--lightgrey);
     border-radius: 1rem;
-    filter: drop-shadow(0 0 0.75rem var(--almostblack));
+    filter: drop-shadow(0 0 0.75rem var(--halfdark));
 
 }
 
@@ -156,7 +156,7 @@ h3{
 }
 
 .menu-bar:hover{
-    box-shadow: 1px 0 0.75rem var(--darkgreen);
+    box-shadow: 1px 0 0.75rem var(--halfdark);
     transition: .5s ease;
 }
 
@@ -233,7 +233,7 @@ h3{
 
 .clicky:hover{
     cursor: pointer;
-    box-shadow: 1px 0 0.75rem var(--darkgreen);
+    box-shadow: 1px 0 0.75rem var(--halfdark);
     transition: .5s ease;
 }
 
@@ -251,7 +251,6 @@ h3{
     display: none;
     position: fixed;
     z-index: 2;
-    padding: var(--normalgap);
     left: 0;
     top: 0;
     width: 100%;
@@ -261,25 +260,33 @@ h3{
 }
 
 .modal-content {
-    position: relative;
-    /* margin: auto; */
-    padding: 0;
-    max-width: 99vw;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content img{
+    
     max-height: 90vh;
     max-width: 90vw;
 }
 
 .prev,
 .next {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
     cursor: pointer;
     position: absolute;
-    top: 50vh;
+    top: 0;
+    height: 100vh;
     width: auto;
     padding: var(--normalgap);
-    margin-top: -50px;
     color: white;
     font-weight: bold;
     font-size: 2rem;
@@ -289,12 +296,12 @@ h3{
 }
 
 .next {
-    right: -20px;
+    right: 0;
     border-radius: 0 6px 6px 0;
 }
 
 .prev {
-    left: -20px;
+    left: 0;
     border-radius: 6px 0 0 6px;
 }
 
@@ -398,6 +405,10 @@ h3{
         left: 0;
         right: 0;
         top: 15%;
+    }
+    .prev,
+    .next {
+    font-size: 5rem;
     }
 }
 
