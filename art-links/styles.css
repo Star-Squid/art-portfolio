@@ -58,8 +58,14 @@ textarea {
   text-align: center;
 }
 
+.big-container{
+  display:flex;
+  justify-content: center;
+}
+
 .container {
   width: 90vw;
+  max-width: 900px;
   padding: 5vw;
   position: relative;
   top: 50%;
@@ -78,7 +84,6 @@ textarea {
 
 .button-link {
   background-color: #D4D4D4;
-  /* background-image: url(images/clover-click3.png); */
   background-repeat: no-repeat;
   background-size: 100%;
   display: flex;
