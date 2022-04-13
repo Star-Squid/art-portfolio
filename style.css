@@ -270,7 +270,7 @@ h3{
 }
 
 .modal-content img{
-    
+
     max-height: 90vh;
     max-width: 90vw;
 }
@@ -297,12 +297,10 @@ h3{
 
 .next {
     right: 0;
-    border-radius: 0 6px 6px 0;
 }
 
 .prev {
     left: 0;
-    border-radius: 6px 0 0 6px;
 }
 
 .prev:hover,
@@ -398,7 +396,7 @@ h3{
 @media (max-width: 770px) {
     .contain-meaning{
         width: 90%;
-    
+
         position: absolute;
         margin-left: auto;
         margin-right: auto;
@@ -417,7 +415,7 @@ h3{
     .contain-meaning{
         width: 60%;
     }
-    
+
     body {
         font-size: calc(1.5 * var(--vminwhenbig));
     }
@@ -429,7 +427,7 @@ h3{
     }
     .menu-bar{
         height: calc(8 * var(--vminwhenbig));
-    }    
+    }
     .menu-title{
         font-size: calc(6 * var(--vminwhenbig));
     }
