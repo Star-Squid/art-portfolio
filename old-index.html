@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Star Squid Studio</title>
+
+    <!-- favicons -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- styles, fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Raleway:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2a2cd0823a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="squidstyles.css">
+
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="index.js" charset="utf-8" defer></script>
+
+  </head>
+  <body>
+
+    <div id="header" class="section">
+      <div class="page-title">
+        <h1>Star</h1>
+      </div>
+
+      <div class="page-title">
+        <h1>Squid</h1>
+      </div>
+
+      <div class="page-title">
+        <h1>Studio</h1>
+      </div>
+
+      <div  id="description">
+       <h3> This may or may not be<br>the only art website where<br>all the work is produced by<br>a miniature person sitting on a leaf.</h3>
+      </div>
+
+      <!-- <div class="enclose-image">
+        <img src="images/clover-long.png" class="main-image">
+      </div> -->
+
+    </div>
+
+    <div id="creat">
+      <div class="title-bar section collapsible">
+        <div class="title-text">
+          Creatures
+        </div>
+      </div>
+
+      <!-- entire green picture area -->
+      <div class="pictures section content">
+
+        <!-- thumbnails -->
+        <img src="artworks/creat-1-thumb.png" class="clicky" onclick="openModal('creat');currentCreatSlide(1)">
+
+        <img src="artworks/creat-2-thumb.png" class="clicky" onclick="openModal('creat');currentCreatSlide(2)">
+
+        <img src="artworks/creat-3-thumb.png" class="clicky" onclick="openModal('creat');currentCreatSlide(3)">
+
+        <img src="artworks/creat-4-thumb.png" class="clicky" onclick="openModal('creat');currentCreatSlide(4)">
+
+        <img src="artworks/creat-5-thumb.png" class="clicky" onclick="openModal('creat');currentCreatSlide(5)">
+
+        <img src="artworks/creat-6-thumb.png" class="clicky" onclick="openModal('creat');currentCreatSlide(6)">
+
+        <img src="artworks/creat-7-thumb.png" class="clicky" onclick="openModal('creat');currentCreatSlide(7)">
+
+        <img src="artworks/creat-8-thumb.png" class="clicky" onclick="openModal('creat');currentCreatSlide(8)">
+
+        <img src="artworks/creat-9-thumb.png" class="clicky" onclick="openModal('creat');currentCreatSlide(9)">
+
+
+        <!-- modal content - normally invisible -->
+        <div id="modal-creat" class="modal">
+
+          <!-- x for closing -->
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+
+          <!-- slideshow begins -->
+          <div class="modal-content">
+
+          <div class="slide-creat" onclick="closeModal()">
+            <img src="artworks/creat-1.png">
+          </div>
+          <div class="slide-creat" onclick="closeModal()">
+            <img src="artworks/creat-2.png">
+          </div>
+          <div class="slide-creat" onclick="closeModal()">
+            <img src="artworks/creat-3.png">
+          </div>
+          <div class="slide-creat" onclick="closeModal()">
+            <img src="artworks/creat-4.png">
+          </div>
+          <div class="slide-creat" onclick="closeModal()">
+            <img src="artworks/creat-5.png">
+          </div>
+          <div class="slide-creat" onclick="closeModal()">
+            <img src="artworks/creat-6.png">
+          </div>
+          <div class="slide-creat" onclick="closeModal()">
+            <img src="artworks/creat-7.png">
+          </div>
+          <div class="slide-creat" onclick="closeModal()">
+            <img src="artworks/creat-8.png">
+          </div>
+          <div class="slide-creat" onclick="closeModal()">
+            <img src="artworks/creat-9.png">
+          </div>
+
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="changeCreatSlides(-1)">&#10094;</a>
+          <a class="next" onclick="changeCreatSlides(1)">&#10095;</a>
+
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div id="face">
+      <div class="title-bar section collapsible">
+        <div class="title-text">Faces</div>
+      </div>
+      <div class="pictures section content">
+
+        <img src="artworks/face-1-thumb.png" class="clicky" onclick="openModal('face');currentFaceSlide(1)">
+
+        <img src="artworks/face-2-thumb.png" class="clicky" onclick="openModal('face');currentFaceSlide(2)">
+
+        <img src="artworks/face-3-thumb.png" class="clicky" onclick="openModal('face');currentFaceSlide(3)">
+
+        <img src="artworks/face-4-thumb.png" class="clicky" onclick="openModal('face');currentFaceSlide(4)">
+
+        <img src="artworks/face-5-thumb.png" class="clicky" onclick="openModal('face');currentFaceSlide(5)">
+
+        <img src="artworks/face-6-thumb.png" class="clicky" onclick="openModal('face');currentFaceSlide(6)">
+
+        <img src="artworks/face-7-thumb.png" class="clicky" onclick="openModal('face');currentFaceSlide(7)">
+
+        <img src="artworks/face-8-thumb.png" class="clicky" onclick="openModal('face');currentFaceSlide(8)">
+
+        <img src="artworks/face-9-thumb.png" class="clicky" onclick="openModal('face');currentFaceSlide(9)">
+
+        <!-- modal content, normally invisible -->
+        <div id="modal-face" class="modal">
+
+        <!-- x for closing -->
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+
+        <!-- slideshow begins -->
+        <div class="modal-content">
+
+          <div class="slide-face" onclick="closeModal()">
+            <img src="artworks/face-1.png">
+          </div>
+          <div class="slide-face" onclick="closeModal()">
+            <img src="artworks/face-2.png">
+          </div>
+          <div class="slide-face" onclick="closeModal()">
+            <img src="artworks/face-3.png">
+          </div>
+          <div class="slide-face" onclick="closeModal()">
+            <img src="artworks/face-4.png">
+          </div>
+          <div class="slide-face" onclick="closeModal()">
+            <img src="artworks/face-5.png">
+          </div>
+          <div class="slide-face" onclick="closeModal()">
+            <img src="artworks/face-6.png">
+          </div>
+          <div class="slide-face" onclick="closeModal()">
+            <img src="artworks/face-7.png">
+          </div>
+          <div class="slide-face" onclick="closeModal()">
+            <img src="artworks/face-8.png">
+          </div>
+          <div class="slide-face" onclick="closeModal()">
+            <img src="artworks/face-9.png">
+          </div>
+
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="changeFaceSlides(-1)">&#10094;</a>
+          <a class="next" onclick="changeFaceSlides(1)">&#10095;</a>
+
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="plant">
+    <div class="title-bar section collapsible">
+      <div class="title-text">Plants</div>
+    </div>
+    <div class="pictures section content">
+
+      <img src="artworks/plant-1-thumb.png" class="clicky" onclick="openModal('plant');currentPlantSlide(1)">
+
+      <img src="artworks/plant-2-thumb.png" class="clicky" onclick="openModal('plant');currentPlantSlide(2)">
+
+      <img src="artworks/plant-3-thumb.png" class="clicky" onclick="openModal('plant');currentPlantSlide(3)">
+
+      <img src="artworks/plant-4-thumb.png" class="clicky" onclick="openModal('plant');currentPlantSlide(4)">
+
+      <img src="artworks/plant-5-thumb.png" class="clicky" onclick="openModal('plant');currentPlantSlide(5)">
+
+      <img src="artworks/plant-6-thumb.png" class="clicky" onclick="openModal('plant');currentPlantSlide(6)">
+
+      <img src="artworks/plant-7-thumb.png" class="clicky" onclick="openModal('plant');currentPlantSlide(7)">
+
+      <img src="artworks/plant-8-thumb.png" class="clicky" onclick="openModal('plant');currentPlantSlide(8)">
+
+      <!-- modal content - normally invisible -->
+      <div id="modal-plant" class="modal">
+
+        <!-- x for closing -->
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+
+        <!-- slideshow begins -->
+        <div class="modal-content">
+
+        <div class="slide-plant" onclick="closeModal()">
+          <img src="artworks/plant-1.png">
+        </div>
+        <div class="slide-plant" onclick="closeModal()">
+          <img src="artworks/plant-2.png">
+        </div>
+        <div class="slide-plant" onclick="closeModal()">
+          <img src="artworks/plant-3.png">
+        </div>
+        <div class="slide-plant" onclick="closeModal()">
+          <img src="artworks/plant-4.png">
+        </div>
+        <div class="slide-plant" onclick="closeModal()">
+          <img src="artworks/plant-5.png">
+        </div>
+        <div class="slide-plant" onclick="closeModal()">
+          <img src="artworks/plant-6.png">
+        </div>
+        <div class="slide-plant" onclick="closeModal()">
+          <img src="artworks/plant-7.png">
+        </div>
+        <div class="slide-plant" onclick="closeModal()">
+          <img src="artworks/plant-8.png">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="changePlantSlides(-1)">&#10094;</a>
+        <a class="next" onclick="changePlantSlides(1)">&#10095;</a>
+
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="place">
+    <div class="title-bar section collapsible">
+      <div class="title-text">Places</div>
+    </div>
+    <div class="pictures section content">
+
+      <img src="artworks/place-1-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(1)">
+
+      <img src="artworks/place-2-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(2)">
+
+      <img src="artworks/place-3-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(3)">
+
+      <img src="artworks/place-4-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(4)">
+
+      <img src="artworks/place-5-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(5)">
+
+      <img src="artworks/place-6-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(6)">
+
+      <img src="artworks/place-7-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(7)">
+
+      <img src="artworks/place-8-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(8)">
+
+      <img src="artworks/place-9-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(9)">
+
+      <img src="artworks/place-10-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(10)">
+
+      <img src="artworks/place-11-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(11)">
+
+      <img src="artworks/place-12-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(12)">
+
+      <img src="artworks/place-13-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(13)">
+
+      <img src="artworks/place-14-thumb.png" class="clicky" onclick="openModal('place');currentPlaceSlide(14)">
+
+      <!-- modal content - slideshow, normally invisible -->
+      <div id="modal-place" class="modal">
+
+      <!-- x for closing -->
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+
+        <!-- slideshow begins -->
+        <div class="modal-content">
+
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-1.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-2.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-3.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-4.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-5.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-6.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-7.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-8.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-9.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-10.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-11.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-12.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-13.png">
+          </div>
+          <div class="slide-place" onclick="closeModal()">
+            <img src="artworks/place-14.png">
+          </div>
+
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="changePlaceSlides(-1)">&#10094;</a>
+          <a class="next" onclick="changePlaceSlides(1)">&#10095;</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="shop">
+    <div class="title-bar section collapsible">
+      <div class="title-text">Shop & Links</div>
+    </div>
+    <div class="pictures section">
+
+      <img class="selfportrait" src="artworks/ghostgreyface2.png">
+      <div id="textbox">
+
+        <p>They say an art portfolio needs to be specific rather than diverse.</p>
+        <p>Well, this one has a little bit of everything, traditional and digital, in a variety of styles, but if there's one thing that unites them, I'd say it's all pretty cute. But that's okay, we're not trying to make big business here... Or are we?</p>
+        <p>For now, you can buy products with my designs on <a href="https://www.redbubble.com/people/Star-Squid/shop?asc=u">Redbubble</a>
+          <!-- , visit my social media, or contact me for a custom artwork using the <a href="https://forms.gle/qYzVD1mUZtkPv3Ar5">form</a>, or just <a href="mailto:hello@star-squid.art">email</a> me. I'm happy to work in all categories presented here, but digital rather than traditional is my focus. -->
+        .</p>
+
+        <a href="https://www.redbubble.com/people/Star-Squid/shop?asc=u"><img src="images/rb-shop.png" class="clicky"></a>
+
+        <!-- <a href="https://forms.gle/qYzVD1mUZtkPv3Ar5"><img src="images/form.png" class="clicky"></a> -->
+
+        <p>I also build websites. Visit my web portfolio at <a href="https://star-squid.github.io">https://star-squid.github.io</a>.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="bottom section">
+    <a href="mailto:hello@star-squid.art">hello@star-squid.art<i class="fa-solid fa-envelope social-icon"></i></a>
+
+    <br>
+
+    <a href="https://www.instagram.com/star.squid.art/" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.redbubble.com/people/Star-Squid/shop?asc=u" class="social-icon"><i class="fa-solid fa-registered"></i></a>
+    <a href="https://www.artstation.com/star-squid" class="social-icon"><i class="fa-brands fa-artstation"></i></a>
+    <a href="https://www.youtube.com/channel/UCaVfeXuUYSY07gD2S0Oo9Nw" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+
+  </div>
+
+  </body>
+</html>
