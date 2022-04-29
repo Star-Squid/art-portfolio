@@ -1,4 +1,7 @@
-////// COLLAPSE MENU ITEMS
+// CONSOLE MESSAGE
+console.log("%c   __,                __,                   __,\n (    _/_           (            o    /   (    _/_       / o\n  `.  /  __,  _      `.  _,  , ,,  __/     `.  /  , , __/ , _\n(___)(__(_/(_/ (_  (___)(_/_(_/_(_(_/_   (___)(__(_/_(_/_(_(_)\n                         /|\n                         (/\ncreated by Barbara Malta :: thanks for peeking under the hood! :: hello@star-squid.art", "font-family:monospace; color:green")
+
+// COLLAPSE MENU ITEMS
 
 //select all collapsible elements
 var collapsibles = document.getElementsByClassName("collapsible");
@@ -21,7 +24,7 @@ for (var i = 0; i < collapsibles.length; i++) {
   collapsibles[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.maxHeight){
+    if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + 25 + "px";
@@ -33,7 +36,7 @@ for (var i = 0; i < collapsibles.length; i++) {
 //relies on thumbnail with onclick="openModal(face);currentFaceSlide(1)
 var currentSection;
 
-function openModal(section){
+function openModal(section) {
   var modalName = "modal-" + section;
   document.getElementById(modalName).style.display = "block";
   currentSection = section;
@@ -48,7 +51,7 @@ function closeModal() {
 }
 
 
-////// CREATURES
+// CREATURES
 
 //slightly different than other sections:
 //trying to work towards a single set of functions for all sections instead of separate
@@ -56,8 +59,12 @@ function closeModal() {
 function showCreatSlides(n) {
   var slideName = "slide-" + currentSection;
   var slides = document.getElementsByClassName(slideName);
-  if (n > slides.length) {slideIndexCreat = 1};
-  if (n < 1) {slideIndexCreat = slides.length};
+  if (n > slides.length) {
+    slideIndexCreat = 1
+  };
+  if (n < 1) {
+    slideIndexCreat = slides.length
+  };
   for (var i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -96,7 +103,7 @@ function currentCreatSlide(n) {
 // }
 
 
-////// FACES
+// FACES
 
 var slideIndexFace = 1;
 showFaceSlides(slideIndexFace);
@@ -114,8 +121,12 @@ function currentFaceSlide(n) {
 function showFaceSlides(n) {
   var i;
   var slidesFace = document.getElementsByClassName("slide-face");
-  if (n > slidesFace.length) {slideIndexFace = 1}
-  if (n < 1) {slideIndexFace = slidesFace.length}
+  if (n > slidesFace.length) {
+    slideIndexFace = 1
+  }
+  if (n < 1) {
+    slideIndexFace = slidesFace.length
+  }
   for (i = 0; i < slidesFace.length; i++) {
     slidesFace[i].style.display = "none";
   }
@@ -141,16 +152,20 @@ function currentPlaceSlide(n) {
 function showPlaceSlides(n) {
   var i;
   var slidesPlace = document.getElementsByClassName("slide-place");
-  if (n > slidesPlace.length) {slideIndexPlace = 1}
-  if (n < 1) {slideIndexPlace = slidesPlace.length}
+  if (n > slidesPlace.length) {
+    slideIndexPlace = 1
+  }
+  if (n < 1) {
+    slideIndexPlace = slidesPlace.length
+  }
   for (i = 0; i < slidesPlace.length; i++) {
     slidesPlace[i].style.display = "none";
   }
-  slidesPlace[slideIndexPlace-1].style.display = "block";
+  slidesPlace[slideIndexPlace - 1].style.display = "block";
 }
 
 
-/////PLANTS
+//PLANTS
 
 var slideIndexPlant = 1;
 showPlantSlides(slideIndexPlant);
@@ -168,37 +183,43 @@ function currentPlantSlide(n) {
 function showPlantSlides(n) {
   var i;
   var slidesPlant = document.getElementsByClassName("slide-plant");
-  if (n > slidesPlant.length) {slideIndexPlant = 1}
-  if (n < 1) {slideIndexPlant = slidesPlant.length}
+  if (n > slidesPlant.length) {
+    slideIndexPlant = 1
+  }
+  if (n < 1) {
+    slideIndexPlant = slidesPlant.length
+  }
   for (i = 0; i < slidesPlant.length; i++) {
     slidesPlant[i].style.display = "none";
   }
-  slidesPlant[slideIndexPlant-1].style.display = "block";
+  slidesPlant[slideIndexPlant - 1].style.display = "block";
 }
 
 
-////// EVERY SECTION - arrow key and escape actions
+// EVERY SECTION - arrow key and escape actions
+// needs work
 document.addEventListener('keydown', function(event) {
-  const key = event.key;
+  var key = event.key;
+  console.log(key);
   switch (key) {
     case "ArrowLeft":
-      changeCreatSlides(-1)
-      changeFaceSlides(-1)
-      changePlantSlides(-1)
-      changePlaceSlides(-1)
-        break;
+      changeCreatSlides(-1);
+      changeFaceSlides(-1);
+      changePlantSlides(-1);
+      changePlaceSlides(-1);
+      break;
     case "ArrowRight":
-      changeCreatSlides(1)
-      changeFaceSlides(1)
-      changePlantSlides(1)
-      changePlaceSlides(1)
-        break;
-      case "Escape":
-        // closeModal('creat')
-        // closeModal('face')
-        // closeModal('place')
-        // closeModal('plant')
-        closeModal(currentSection)
-        break;
-    }
+      changeCreatSlides(1);
+      changeFaceSlides(1);
+      changePlantSlides(1);
+      changePlaceSlides(1);
+      break;
+    case "Escape":
+      // closeModal('creat')
+      // closeModal('face')
+      // closeModal('place')
+      // closeModal('plant')
+      closeModal(currentSection);
+      break;
+  }
 });
