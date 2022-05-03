@@ -152,7 +152,7 @@ h3 {
 
 @media (hover: hover) {
   .menu-bar:hover {
-    box-shadow: 0 0 0.75rem var(--halfdark);
+    box-shadow: 0 -0.3rem 0.2rem rgba(14, 26, 4, 0.6);
     transition: 0.5s ease;
   }
   .clicky:hover {
@@ -165,7 +165,7 @@ h3 {
   }
   .prev:hover,
   .next:hover {
-    background-color: var(--halfdark);
+    background-color: rgba(14, 26, 4, 0.2);
   }
 }
 
