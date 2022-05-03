@@ -10,21 +10,24 @@
   --biggap: 5vw;
   --doublegap: 7vw;
   --vminwhenbig: 10.5px;
+
   --transparent: rgba(1, 1, 1, 0);
   --verylightgrey: #f1f1f1;
-  --lightgrey: #D4D4D4;
+  --lightgrey: #d4d4d4;
   --yellowish: #d0d33a;
-  --lightgreen: #A4C93C;
+  --lightgreen: #a4c93c;
   --mediumlightgreen: #86ac1d;
   --mediumgreen: #568b2b;
   --mediumdarkgreen: #40661d;
-  --darkgreen: #314D16;
+  --darkgreen: #314d16;
   --almostblack: #0e1a04;
   --halfdark: rgba(14, 26, 4, 0.8);
-  --pink: #7C324D;
+  --pink: #7c324d;
 }
 
-html, body, div {
+html,
+body,
+div {
   margin: 0;
   padding: 0;
 }
@@ -32,7 +35,7 @@ html, body, div {
 body {
   text-align: center;
   background: var(--lightgrey);
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
   background: var(--darkgreen);
 }
@@ -42,8 +45,16 @@ body {
   height: 100vh;
   position: relative;
   background: var(--darkgreen);
-  background: -webkit-radial-gradient(circle top, var(--mediumgreen) 40%, var(--darkgreen) 70%);
-  background-image: radial-gradient(circle at top, var(--mediumgreen) 40%, var(--darkgreen) 70%);
+  background: -webkit-radial-gradient(
+    circle top,
+    var(--mediumgreen) 40%,
+    var(--darkgreen) 70%
+  );
+  background-image: radial-gradient(
+    circle at top,
+    var(--mediumgreen) 40%,
+    var(--darkgreen) 70%
+  );
   background-repeat: no-repeat;
 }
 
@@ -91,7 +102,7 @@ body {
 }
 
 h1 {
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne", cursive;
   font-size: 8vw;
   text-align: right;
   padding: 0;
@@ -136,12 +147,12 @@ h3 {
   flex: 2;
   flex-basis: auto;
   cursor: pointer;
-  box-shadow: 1px 0 0.3rem var(--halfdark);
+  box-shadow: 0 -0.3rem 0.2rem rgba(14, 26, 4, 0.2);
 }
 
 .menu-bar:hover {
-  box-shadow: 1px 0 0.75rem var(--halfdark);
-  transition: .5s ease;
+  box-shadow: 0 0 0.75rem var(--halfdark);
+  transition: 0.5s ease;
 }
 
 @media (hover: none) {
@@ -156,8 +167,8 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Parisienne', cursive;
-  font-size: 5.5vw;
+  font-family: "Merriweather", serif;
+  font-size: 5vw;
   color: var(--verylightgrey);
 }
 
@@ -227,7 +238,7 @@ h3 {
 }
 
 .clicky::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -235,13 +246,13 @@ h3 {
   height: 100%;
   background: var(--lightgrey);
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .clicky:hover {
   cursor: pointer;
   box-shadow: 1px 0 0.75rem var(--halfdark);
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .clicky:hover::before {
@@ -303,6 +314,7 @@ h3 {
   color: white;
   font-weight: bold;
   font-size: 2rem;
+  filter: drop-shadow(0 0 0.2rem var(--almostblack));
   transition: 0.6s ease;
   user-select: none;
   -webkit-user-select: none;
@@ -354,7 +366,7 @@ h3 {
 #textbox a:focus #textbox a:visited {
   color: var(--yellowish);
   text-decoration: none;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 #textbox img {
@@ -385,7 +397,7 @@ h3 {
 .footer a:focus .footer a:visited {
   color: var(--yellowish);
   text-decoration: none;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .social-icon {
@@ -399,10 +411,17 @@ h3 {
   display: inline-block;
 }
 
+.do-not-scroll {
+  overflow-y: hidden;
+}
+
 /* Small sizes */
 @media (max-width: 770px) {
   .clicky {
     height: 220px;
+    width: 220px;
+    max-height: 35vw;
+    max-width: 35vw;
     flex-basis: 220px;
   }
 
@@ -416,9 +435,14 @@ h3 {
     top: 15%;
   }
 
+  #textbox {
+    text-align: left;
+  }
+
   .prev,
   .next {
-    font-size: 7rem;
+    font-size: 4rem;
+    padding: 2rem;
   }
 }
 
