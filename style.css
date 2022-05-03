@@ -147,7 +147,7 @@ h3 {
   flex: 2;
   flex-basis: auto;
   cursor: pointer;
-  box-shadow: 0 -0.3rem 0.2rem rgba(14, 26, 4, 0.2);
+  box-shadow: 0 -0.2rem 0.2rem rgba(14, 26, 4, 0.4);
 }
 
 .menu-bar:hover {
@@ -333,10 +333,19 @@ h3 {
   background-color: var(--halfdark);
 }
 
+.prev:active,
+.next:active {
+  background-color: none;
+}
+
+.prev:visited,
+.next:visited {
+  background-color: none;
+}
+
 /* Shop */
 #shop .pictures {
   justify-content: space-between;
-  /* padding: var(--smallgap)  calc(var(--doublegap) * 2)  var(--normalgap)  var(--doublegap); */
   justify-content: center;
   align-items: center;
   gap: var(--normalgap);
