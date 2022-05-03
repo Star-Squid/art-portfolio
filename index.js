@@ -31,6 +31,21 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+//change slides on swipe
+document.addEventListener('swiped-left', function(e) {
+  changeCreatSlides(-1);
+  changeFaceSlides(-1);
+  changePlantSlides(-1);
+  changePlaceSlides(-1);
+});
+
+document.addEventListener('swiped-right', function(e) {
+  changeCreatSlides(1);
+  changeFaceSlides(1);
+  changePlantSlides(1);
+  changePlaceSlides(1);
+});
+
 // PREVENT MAIN BODY FOCUS WHEN IN A MODAL
 //find visible elements that can be tabbed to - only run after a collapsible is open, to include thumbnails
 function tabbable(el) {
