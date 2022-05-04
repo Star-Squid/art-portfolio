@@ -150,23 +150,17 @@ h3 {
   box-shadow: 0 -0.2rem 0.2rem rgba(14, 26, 4, 0.4);
 }
 
-@media (hover: hover) {
-  .menu-bar:hover {
-    box-shadow: 0 -0.3rem 0.2rem rgba(14, 26, 4, 0.6);
-    transition: 0.5s ease;
-  }
-  .clicky:hover {
-    cursor: pointer;
-    box-shadow: 1px 0 0.75rem var(--halfdark);
-    transition: 0.5s ease;
-  }
-  .clicky:hover::before {
-    opacity: 0.23;
-  }
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(14, 26, 4, 0.2);
-  }
+.menu-bar:hover {
+  box-shadow: 0 -0.3rem 0.2rem rgba(14, 26, 4, 0.6);
+  transition: 0.5s ease;
+}
+.menu-bar:focus {
+  box-shadow: 0 0 0.3rem rgba(14, 26, 4, 0.6);
+  transition: 0.5s ease;
+}
+
+.menu-bar:active {
+  box-shadow: none;
 }
 
 .menu-title {
@@ -176,7 +170,7 @@ h3 {
   align-items: center;
   justify-content: center;
   font-family: "Merriweather", serif;
-  font-size: 5vw;
+  font-size: 5vmin;
   color: var(--verylightgrey);
 }
 
@@ -257,6 +251,17 @@ h3 {
   transition: 0.5s ease;
 }
 
+.clicky:hover
+.clicky:focus {
+  cursor: pointer;
+  box-shadow: 1px 0 0.75rem var(--halfdark);
+  transition: 0.5s ease;
+}
+
+.clicky:hover::before {
+  opacity: 0.23;
+}
+
 .content {
   display: none;
   max-height: 0;
@@ -326,13 +331,17 @@ h3 {
   left: 0;
 }
 
-/* 
+.prev:hover,
+.next:hover {
+  background-color: rgba(14, 26, 4, 0.2);
+}
+
+.prev:focus,
+.next:focus,
 .prev:active,
-.next:active,
-.prev:visited,
-.next:visited {
+.next:active {
   background-color: none;
-} */
+}
 
 /* Shop */
 #shop .pictures {
@@ -439,11 +448,11 @@ h3 {
     text-align: left;
   }
 
-  .prev,
+  /* .prev,
   .next {
     font-size: 4rem;
     padding: 2rem;
-  }
+  } */
 }
 
 /* Large sizes */
